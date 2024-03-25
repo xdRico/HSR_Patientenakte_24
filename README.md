@@ -30,3 +30,32 @@
 - Mit `java -version` validieren, dass Java 17 installiert ist
 - Projekt über VS Code ausführen
 - @RestController implementieren mit @GetMapping("hello") der "Hello World"! zurück gibt
+
+
+
+## Containers and Dockers
+Problem bei (polygloten) verteilten Systemen:
+- Jede Umgebung muss aufwendig konfiguriert werden. Sowohl Server als auch Lokale Dev Environments
+- Konfiguration muss identisch repliziert werden um Fehlerquellen durch unterschiedliche Umgebungen zu vermeiden
+- Macht polyglote Systeme sehr aufwendig da für jede Sprache die eigene Entwicklungsumgebung geschaffen werden muss.
+- Wechseln der versionen in der Entwicklung auch lästig
+
+![image](https://github.com/StraysWonderland/HSR_distributedsystems_24/assets/22505258/6b291787-1a4b-4394-96e5-fe2e00805b7e)
+
+Probleme werden durch Containerisierung vermieden.
+- Zielumgebung braucht lediglich die Container Engine.
+- Container bringen mit was sie benötigen
+
+![image](https://github.com/StraysWonderland/HSR_distributedsystems_24/assets/22505258/d0462b73-b581-4676-8d00-ec776b450b29)
+
+### Images vs Container
+- Aus dem Sourcerepo wird mittels Dockerfile ein Image (blaupause) erstellt.
+- Aus diesem Image lassen sich beliebig viele Instanzen generieren => Container
+- Images lassen sich auf Docker Hub, einem öffentlichen Image Repository ablegen. 
+- Images lassen sich so von überall beziehen
+  
+![image](https://github.com/StraysWonderland/HSR_distributedsystems_24/assets/22505258/59eb76da-b201-47de-8e2e-f9ad71e4e114)
+
+### Students Questions:
+- Muss für jeden einzelnen container die umgebung einzeln installiert werden ?
+- Läuft der container mit rechenpower des Lokalen pc oder auf einem server?
