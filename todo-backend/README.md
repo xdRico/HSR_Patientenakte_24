@@ -12,3 +12,4 @@
 2. Build the docker image using `docker build -t todo-backend:0.0.1`
 3. Verify that the image is there with `docker images`
 4. Run the docker image by running `docker run -p 8080:8080 todo-backend:0.0.1`
+5. Verify the container is running correctly with `curl localhost:8080/hello` it should output "Hello World!"
