@@ -1,3 +1,5 @@
+CREATE SEQUENCE todo_item_seq START 1;
+
 CREATE TABLE IF NOT EXISTS todo_item (
     todo_item_id SERIAL PRIMARY KEY,
     todo_item_name VARCHAR(50) NOT NULL,
