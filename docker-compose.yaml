@@ -8,7 +8,7 @@ services:
   #     - todo-network
 
   todo-backend:
-    image: paulanuschek/todo-backend:0.0.1
+    image: todo-backend:0.0.1
     ports:
       - "8080:8080"
     networks:
@@ -17,7 +17,7 @@ services:
       - todo-database
 
   todo-database:
-    image: paulanuschek/todo-database:0.0.1
+    image: todo-database:0.0.1
     ports:
       - "5432:5432"
     networks:

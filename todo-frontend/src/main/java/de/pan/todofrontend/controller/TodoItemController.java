@@ -16,7 +16,7 @@ public class TodoItemController {
         this.backendService = backendService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/items")
     public List<TodoItem> getTodoItems() {
         return backendService.getTodoItems();
     }
