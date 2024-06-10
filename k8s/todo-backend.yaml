@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: nginx
+  name: todo-backend
+spec:
+  containers:
+  - image: cagritasci/hsr_distributedsystems_24_todo_backend:0.1
+    name: todo-backend
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
