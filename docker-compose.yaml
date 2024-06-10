@@ -1,14 +1,14 @@
 version: '3.1'
 services:
-  # todo-frontend:
-  #   image: paulanuschek/todo-frontend:0.0.1
-  #   ports:
-  #     - "8081:8081"
-  #   networks:
-  #     - todo-network
+  todo-frontend:
+    image: cagritasci/hsr_distributedsystems_24_todo_frontend:0.1 
+    ports:
+      - "8081:8081"
+    networks:
+      - todo-network
 
   todo-backend:
-    image: todo-backend:0.0.1
+    image: cagritasci/hsr_distributedsystems_24_todo_backend:0.1 
     ports:
       - "8080:8080"
     networks:
@@ -17,7 +17,7 @@ services:
       - todo-database
 
   todo-database:
-    image: todo-database:0.0.1
+    image: cagritasci/hsr_distributedsystems_24_todo_database:0.1 
     ports:
       - "5432:5432"
     networks:
