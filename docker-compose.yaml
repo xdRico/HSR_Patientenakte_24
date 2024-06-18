@@ -1,27 +1,27 @@
 version: '3.1'
 services:
-  todo-frontend:
-    image: cagritasci/hsr_distributedsystems_24_todo_frontend:0.1 
+  patientfile-frontend:
+    image: cagritasci/hsr_distributedsystems_24_patientfile_frontend:0.1 
     ports:
       - "8081:8081"
     networks:
-      - todo-network
+      - patientfile-network
 
-  todo-backend:
-    image: cagritasci/hsr_distributedsystems_24_todo_backend:0.1 
+  patientfile-backend:
+    image: cagritasci/hsr_distributedsystems_24_patientfile_backend:0.1 
     ports:
       - "8080:8080"
     networks:
-      - todo-network
+      - patientfile-network
     depends_on:
-      - todo-database
+      - patientfile-database
 
-  todo-database:
-    image: cagritasci/hsr_distributedsystems_24_todo_database:0.1 
+  patientfile-database:
+    image: cagritasci/hsr_distributedsystems_24_patientfile_database:0.1 
     ports:
       - "5432:5432"
     networks:
-      - todo-network
+      - patientfile-network
 
 networks:
-  todo-network: {}
+  patientfile-network: {}

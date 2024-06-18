@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>patientfile-ui</title>
+</head>
+
+<body>
+    <h1>Patientenakten</h1>
+
+    <form action="#" th:action="@{/patientfiles}" th:object="${patientfile}" method="post">
+        <table border="1">
+            <tr>
+                <td><label>Name</label></td>
+                <td><input type="text" th:field="*{patientfileItemName}" /></td>
+            </tr>
+            <tr>
+                <td><label>Description</label></td>
+                <td><input type="text" th:field="*{patientfileItemDescription}" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+        </table>
+    </form>
+
+    <br>
+
+    <table border="1">
+        <tr th:each="patientfile: ${patientfiles}">
+            <td th:text="${patientfile.patientfileItemName}" />
+            <td th:text="${patientfile.patientfileItemDescription}" />
+        </tr>
+    </table>
+</body>
+
+</html>

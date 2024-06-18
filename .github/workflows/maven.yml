@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Build and Publish Todobackend
+name: Build and Publish Patientfile
 
 on:
   push:
@@ -19,7 +19,7 @@ env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{ github.repository }}-todobackend
+  IMAGE_NAME: ${{ github.repository }}-patientfile
 
 jobs:
   build:
@@ -37,7 +37,7 @@ jobs:
         cache: maven
         
     - name: Build with Maven
-      working-directory: ./todo-backend
+      working-directory: ./patientfile-backend
       run: mvn -B package  
       
     # Set up BuildKit Docker container builder to be able to build
@@ -66,7 +66,7 @@ jobs:
       id: build-and-push
       uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5.0.0
       with:
-        context: ./todo-backend
+        context: ./patientfile-backend
         push: ${{ github.event_name != 'pull_request' }}
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels}}

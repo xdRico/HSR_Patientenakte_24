@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: patientfile-database
+  name: patientfile-database
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: patientfile-database
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: patientfile-database
+    spec:
+      containers:
+      - image: xdRico/hsr_patientenakte_24_patientfile_database:0.1
+        name: hsr-patientenakte-24-patientfile-database-b94f7
+        ports:
+        - containerPort: 5432
+        resources: {}
+status: {}

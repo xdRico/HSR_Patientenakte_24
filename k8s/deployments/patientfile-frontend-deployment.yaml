@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: patientfile-frontend
+  name: patientfile-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: patientfile-frontend
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: patientfile-frontend
+    spec:
+      containers:
+      - image: xdRico/hsr_patientenakte_24_patientfile_frontend:0.1
+        name: hsr-patientenakte-24-patientfile-frontend-fqhx8
+        ports:
+        - containerPort: 8081
+        resources: {}
+status: {}
