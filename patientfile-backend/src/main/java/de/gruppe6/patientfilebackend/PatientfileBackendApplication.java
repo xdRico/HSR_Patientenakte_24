@@ -1,4 +1,4 @@
-package de.pan.patientfilebackend;
+package de.gruppe6.patientfilebackend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

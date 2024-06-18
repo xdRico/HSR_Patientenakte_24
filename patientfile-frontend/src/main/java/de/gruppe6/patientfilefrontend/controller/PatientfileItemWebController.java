@@ -1,4 +1,4 @@
-package de.pan.patientfilefrontend.controller;
+package de.gruppe6.patientfilefrontend.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import de.pan.patientfilefrontend.model.PatientfileItem;
-import de.pan.patientfilefrontend.service.BackendService;
+import de.gruppe6.patientfilefrontend.model.PatientfileItem;
+import de.gruppe6.patientfilefrontend.service.BackendService;
 
 @Controller
 public class PatientfileItemWebController {

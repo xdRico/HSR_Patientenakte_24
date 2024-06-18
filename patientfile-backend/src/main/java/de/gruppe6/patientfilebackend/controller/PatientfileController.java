@@ -1,4 +1,4 @@
-package de.pan.patientfilebackend.controller;
+package de.gruppe6.patientfilebackend.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import de.pan.patientfilebackend.model.PatientfileItem;
-import de.pan.patientfilebackend.repository.PatientfileItemRepository;
+import de.gruppe6.patientfilebackend.model.PatientfileItem;
+import de.gruppe6.patientfilebackend.repository.PatientfileItemRepository;
 
 @RestController
 public class PatientfileController {
