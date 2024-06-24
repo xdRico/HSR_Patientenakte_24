@@ -1,14 +1,14 @@
 version: '3.1'
 services:
-  # patientfile-frontend:
-  #   image: hsr_distributedsystems_24_patientfile_frontend:0.1 
-  #   ports:
-  #     - "8081:8081"
-  #   networks:
-  #     - patientfile-network
+  patientfile-frontend:
+    image: hsr_distributedsystems_24_patientfile_frontend:0.1
+    ports:
+      - "8081:8081"
+    networks:
+      - patientfile-network
 
   patientfile-backend:
-    image: hsr_distributedsystems_24_patientfile_backend:0.1 
+    image: hsr_distributedsystems_24_patientfile_backend:0.1
     ports:
       - "8080:8080"
     networks:
