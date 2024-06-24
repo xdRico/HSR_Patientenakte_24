@@ -1,14 +1,14 @@
 version: '3.1'
 services:
   patientfile-frontend:
-    image: cagritasci/hsr_distributedsystems_24_patientfile_frontend:0.1 
+    image: hsr_distributedsystems_24_patientfile_frontend:0.1
     ports:
       - "8081:8081"
     networks:
       - patientfile-network
 
   patientfile-backend:
-    image: cagritasci/hsr_distributedsystems_24_patientfile_backend:0.1 
+    image: hsr_distributedsystems_24_patientfile_backend:0.1
     ports:
       - "8080:8080"
     networks:
@@ -17,7 +17,7 @@ services:
       - patientfile-database
 
   patientfile-database:
-    image: cagritasci/hsr_distributedsystems_24_patientfile_database:0.1 
+    image: hsr_distributedsystems_24_patientfile_database:0.1 
     ports:
       - "5432:5432"
     networks:
