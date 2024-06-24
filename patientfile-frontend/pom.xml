@@ -8,7 +8,7 @@
 		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>de.pan</groupId>
+	<groupId>de.gruppe6</groupId>
 	<artifactId>patientfile-frontend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>patientfile-frontend</name>
