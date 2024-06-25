@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import de.gruppe6.patientfilefrontend.model.PatientfileItem;
 
-@FeignClient(value = "backendService", url = "http://localhost:8080/")
+@FeignClient(value = "backendService", url = "http://" + "${BACKEND_URL:localhost}" + ":8080/")
 public interface BackendService {
     @RequestMapping(method = RequestMethod.GET, value = "/patientfile")
     List<PatientfileItem> getPatientfileItems();
